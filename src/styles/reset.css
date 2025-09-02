@@ -208,7 +208,7 @@ button,
 /* Accessibility: ensure focus outlines remain visible for keyboard users; projects can override with more tasteful styles */
 :root {
     /* Tipografia e cores padrão do projeto — extraídas para variáveis para tornar dinâmicas */
-    --font-family: 'Urbanist', sans-serif;
+    --font-family: "Montserrat", sans-serif;
 
     /* cores principais */
     --color-black: #1d1d1b;
@@ -217,9 +217,9 @@ button,
     --color-offwhite-40: #fbfbfb40;
     --color-gray: #cecece;
     --color-darktext: #333333;
-    --color-green: #0F9D58;
+    --color-green: #0078ac;
     --color-red: #d93025;
-    --color-button: #4D5615;
+    --color-button: #179cd6;
     --color-link: #063db6;
     --focus-color: #2563eb; /* azul acessível por padrão, pode ser sobrescrito */
 }
