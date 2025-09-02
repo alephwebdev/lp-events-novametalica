@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Feira Construir AI | Fast Homes</title>
+
+        <!-- Primary SEO -->
+        <meta name="description" content="Receba o catálogo da Fast Homes direto no seu WhatsApp. Ofertas e lançamentos para Feira Construir AI — imóveis, preços e contato rápido via WhatsApp.">
+        <meta name="keywords" content="Feira Construir AI, Fast Homes, catálogo, imóveis, WhatsApp, lançamentos, imóveis na planta">
+        <meta name="author" content="Aleph Desenvolvedor Web">
+        <meta name="robots" content="index, follow">
+        <link rel="canonical" href="https://eventos.fasthomes.com.br">
+
+        <!-- Open Graph / Social -->
+        <meta property="og:locale" content="pt_BR">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="Feira Construir AI | Fast Homes">
+        <meta property="og:description" content="Receba o catálogo da Fast Homes direto no seu WhatsApp. Ofertas e lançamentos para Feira Construir AI.">
+        <meta property="og:url" content="https://eventos.fasthomes.com.br">
+        <meta property="og:site_name" content="Fast Homes">
+        <meta property="og:image" content="src/assets/logo-da-fasthomes.svg">
+        <meta property="og:image:alt" content="Logo Fast Homes">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="Feira Construir AI | Fast Homes">
+        <meta name="twitter:description" content="Receba o catálogo da Fast Homes direto no seu WhatsApp. Ofertas e lançamentos em Feira Construir AI.">
+        <meta name="twitter:image" content="src/assets/logo-da-fasthomes.svg">
+
+        <!-- Favicon & touch icon -->
+        <link rel="icon" href="src/assets/logo-da-fasthomes.svg" type="image/svg+xml">
+        <link rel="apple-touch-icon" href="src/assets/logo-da-fasthomes.svg">
+        <meta name="theme-color" content="#ffffff">
+        <!-- script sets theme-color meta from CSS variables so it follows runtime theming -->
+        <script>
+            (function(){
+                try{
+                    function updateThemeColor(){
+                        var root = getComputedStyle(document.documentElement);
+                        var color = root.getPropertyValue('--color-white') || '#ffffff';
+                        var meta = document.querySelector('meta[name="theme-color"]');
+                        if(meta) meta.setAttribute('content', color.trim());
+                    }
+                    if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', updateThemeColor);
+                    else updateThemeColor();
+                }catch(e){/* silent */}
+            })();
+        </script>
+
+        <!-- Styles: reset first, then global -->
+        <link rel="stylesheet" href="src/styles/reset.css">
+        <link rel="stylesheet" href="src/styles/global.css">
+    <!-- AOS library for entrance animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+        <!-- JSON-LD structured data -->
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+                {
+                    "@type": "Organization",
+                    "name": "Fast Homes",
+                    "url": "https://eventos.fasthomes.com.br/",
+                    "logo": "https://eventos.fasthomes.com.br/src/assets/logo-da-fasthomes.svg"
+                },
+                {
+                    "@type": "WebSite",
+                    "url": "https://eventos.fasthomes.com.br/",
+                    "name": "Feira Construir AI | Fast Homes",
+                    "potentialAction": {
+                        "@type": "SearchAction",
+                        "target": "https://eventos.fasthomes.com.br/?s={search_term_string}",
+                        "query-input": "required name=search_term_string"
+                    }
+                }
+            ]
+        }
+        </script>
+</head>
+
+<body>
+    <section class="form-section">
+        <!-- Background wrapper now contains multiple slides for automatic carousel -->
+        <div class="bg" aria-hidden="true">
+            <div class="bg-slide active" style="background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ba6df773-c6e0-49ea-0c41-65f8a3bc1d00/public');"></div>
+            <div class="bg-slide" style="background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/250bcb65-b6e1-4e69-ae25-684e90957b00/public');"></div>
+            <div class="bg-slide" style="background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/df33b748-1460-46a4-e7cd-e8c9008e9000/public');"></div>
+            <div class="bg-slide" style="background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/a76ababe-8ade-48a8-5da4-5f6b9a1f8500/public');"></div>
+            <div class="bg-slide" style="background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/ebf4dc80-afe9-463f-e35d-73ede6299200/public');"></div>
+            <div class="bg-slide" style="background-image: url('https://imagedelivery.net/1n9Gwvykoj9c9m8C_4GsGA/c2c98643-0a28-49ca-4b53-e004013ce100/public');"></div>
+        </div>
+        <main class="container">
+            <img src="src/assets/logo-fast-homes-completa.svg" alt="logo-da-fast-homes" loading="eager">
+            <h1>Receba o catálogo direto no seu WhatsApp</h1>
+            <form id="whatsapp-form" data-webhook="https://n8n.unitycompany.com.br/webhook/send-pdf-wpp"
+                data-fallback-url="/catalogo.pdf" data-success-img="src/assets/sucess.svg"
+                data-error-img="src/assets/erro.svg">
+                <label>
+                    <span>Digite seu WhatsApp</span>
+                    <input id="phone" type="tel" name="tel" inputmode="numeric" autocomplete="tel"
+                        placeholder="+55 (24) 99999-9999" required>
+                    <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg" id="whatsapp-icon" aria-hidden="true">
+                        <path
+                            d="m435.921875 74.351562c-48.097656-47.917968-112.082031-74.3242182-180.179687-74.351562-67.945313 0-132.03125 26.382812-180.445313 74.289062-48.5 47.988282-75.234375 111.761719-75.296875 179.339844v.078125.046875c.0078125 40.902344 10.753906 82.164063 31.152344 119.828125l-30.453125 138.417969 140.011719-31.847656c35.460937 17.871094 75.027343 27.292968 114.933593 27.308594h.101563c67.933594 0 132.019531-26.386719 180.441406-74.296876 48.542969-48.027343 75.289062-111.71875 75.320312-179.339843.019532-67.144531-26.820312-130.882813-75.585937-179.472657zm-180.179687 393.148438h-.089844c-35.832032-.015625-71.335938-9.011719-102.667969-26.023438l-6.621094-3.59375-93.101562 21.175782 20.222656-91.90625-3.898437-6.722656c-19.382813-33.425782-29.625-70.324219-29.625-106.71875.074218-117.800782 96.863281-213.75 215.773437-213.75 57.445313.023437 111.421875 22.292968 151.984375 62.699218 41.175781 41.03125 63.84375 94.710938 63.824219 151.152344-.046875 117.828125-96.855469 213.6875-215.800781 213.6875zm0 0">
+                        </path>
+                        <path
+                            d="m186.152344 141.863281h-11.210938c-3.902344 0-10.238281 1.460938-15.597656 7.292969-5.363281 5.835938-20.476562 19.941406-20.476562 48.628906s20.964843 56.40625 23.886718 60.300782c2.925782 3.890624 40.46875 64.640624 99.929688 88.011718 49.417968 19.421875 59.476562 15.558594 70.199218 14.585938 10.726563-.96875 34.613282-14.101563 39.488282-27.714844s4.875-25.285156 3.414062-27.722656c-1.464844-2.429688-5.367187-3.886719-11.214844-6.800782-5.851562-2.917968-34.523437-17.261718-39.886718-19.210937-5.363282-1.941406-9.261719-2.914063-13.164063 2.925781-3.902343 5.828125-15.390625 19.3125-18.804687 23.203125-3.410156 3.894531-6.824219 4.382813-12.675782 1.464844-5.851562-2.925781-24.5-9.191406-46.847656-29.050781-17.394531-15.457032-29.464844-35.167969-32.878906-41.003906-3.410156-5.832032-.363281-8.988282 2.570312-11.898438 2.628907-2.609375 6.179688-6.179688 9.105469-9.582031 2.921875-3.40625 3.753907-5.835938 5.707031-9.726563 1.949219-3.890625.972657-7.296875-.488281-10.210937-1.464843-2.917969-12.691406-31.75-17.894531-43.28125h.003906c-4.382812-9.710938-8.996094-10.039063-13.164062-10.210938zm0 0">
+                        </path>
+                    </svg>
+                </label>
+                <button id="submit-btn" type="submit" disabled aria-disabled="true">
+                    <span class="btn-text">Receber catálogo agora!</span>
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" id="fi_4692145" aria-hidden="true">
+                        <g id="arrow/arrow-top-right" fill-rule="evenodd">
+                            <path id="Fill-4"
+                                d="m6.00025 3.4986c0 .276.224.5.5.5h11.793l-14.147 14.146c-.195.196-.195.512 0 .708.196.195.512.195.708 0l14.146-14.147v11.793c0 .276.224.5.5.5s.5001115-.224.5001115-.5v-12.999c.0058885-.27-.2311115-.507-.5011115-.50111151h-12.999c-.276 0-.5.22411151-.5.50011151">
+                            </path>
+                        </g>
+                    </svg>
+                </button>
+                <div id="form-message" class="form-message" aria-live="polite" hidden></div>
+                <div id="form-popup" class="form-popup" hidden>
+                    <div class="popup-backdrop" data-close></div>
+                    <div class="popup-content" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+                        <img class="popup-illustration" alt="" hidden>
+                        <h3 id="popup-title" class="popup-title"></h3>
+                        <div class="popup-body">
+                            <p class="popup-message"></p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <p>
+                Ao enviar esse formulário você está de acordo com a nossa <a href="https://www.fasthomes.com.br/politica-de-privacidade" target="_blank">politica de
+                    privacidade</a>.
+            </p>
+        </main>
+        <span class="autor"><a href="https://www.alephsramos.com.br" target="_blank"><img src="src/assets/icon-black-aleph-desenvolvedor-web.svg" alt="logo-aleph-desenvolvedor-web"></a></span>
+    </section>
+    <div id="loading-overlay" class="loading-overlay" hidden>
+        <div class="loading-backdrop"></div>
+        <div class="loading-center">
+            <div class="loading-spinner" role="status" aria-live="polite" aria-label="Carregando"></div>
+        </div>
+    </div>
+    <!-- AOS script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" defer></script>
+    <!-- Inicializa AOS e aplica data-aos sequencialmente -->
+    <script defer>
+        (function () {
+            // Wait for DOMContentLoaded to ensure elements exist
+            function applyAos() {
+                try {
+                    // Select the area where we want the sequence. Use .container if present, otherwise body
+                    var root = document.querySelector('.container') || document.body;
+                    if (!root) return;
+
+                    // Gather all visible, focusable or meaningful elements to animate
+                    var selector = 'img, h1, form, label, input, button, .popup-content, #loading-overlay, .bg';
+                    var nodes = Array.from(root.querySelectorAll(selector));
+
+                    // Filter out elements that are not displayed
+                    nodes = nodes.filter(function (el) {
+                        var style = window.getComputedStyle(el);
+                        return style.display !== 'none' && style.visibility !== 'hidden' && el.offsetParent !== null;
+                    });
+
+                    // Apply AOS attributes in sequence with incremental delays
+                    var baseDelay = 80; // ms between items
+                    nodes.forEach(function (el, idx) {
+                        // If element already declares data-aos, keep it but ensure a delay
+                        if (!el.hasAttribute('data-aos')) el.setAttribute('data-aos', 'fade-up');
+                        // Only set delay if not present
+                        if (!el.hasAttribute('data-aos-delay')) {
+                            el.setAttribute('data-aos-delay', String(idx * baseDelay));
+                        }
+                        // Use a slightly longer duration for a smoother feeling
+                        if (!el.hasAttribute('data-aos-duration')) el.setAttribute('data-aos-duration', '700');
+                        // Once set, add a small stagger class for CSS hooks if needed
+                        el.classList.add('aos-stagger-item');
+                    });
+
+                    // Initialize AOS with easing and once=true so animation plays once
+                    if (window.AOS && typeof window.AOS.init === 'function') {
+                        window.AOS.init({
+                            once: true,
+                            easing: 'ease-out-cubic',
+                            duration: 700,
+                            anchorPlacement: 'top-bottom',
+                        });
+                    }
+                } catch (e) {
+                    // fail silently
+                    console.error('AOS apply error', e);
+                }
+            }
+
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', applyAos);
+            } else {
+                applyAos();
+            }
+        })();
+    </script>
+    <script src="./src/script/main.js" defer></script>
+</body>

@@ -1,0 +1,236 @@
+/* reset.css — Reset e padrões sensatos
+   Objetivo: zerar estilos de navegador e aplicar pequenas melhorias acessíveis
+   Instruções: importe este arquivo antes dos estilos do projeto (ex: reset.css primeiro, depois global.css)
+*/
+
+/* Box sizing: facilita cálculos de largura/altura em layouts modernos */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Remover margens/paddings padrões e garantir altura mínima do root */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+    /* evitar ajuste automático de tamanho de texto em dispositivos móveis */
+    -ms-overflow-style: scrollbar;
+    /* forçar scrollbar no IE */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: var(--font-family);
+}
+
+/* Tipografia base: não forçar fonte — o projeto deve controlar a família/tamanho */
+body {
+    line-height: 1.5;
+    /* melhora legibilidade por padrão */
+    word-wrap: break-word;
+    background: transparent;
+    color: inherit;
+    font-family: inherit;
+}
+
+/* Remover espaçamentos padrão em headings e parágrafos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    font-weight: inherit;
+}
+
+/* Listas: remover recuo/estilos por padrão */
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Links: herdar cor e não forçar sublinhado (projeto define o estilo) */
+a {
+    color: inherit;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+/* Imagens e media responsivos por padrão */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tabelas: colapso e reset básico */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Formulários: herdar fonte e remover aparências inconsistentes */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+    margin: 0;
+}
+
+/* Botões: reset de aparência e cursor */
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+/* Inputs number - remover setas no Chrome/Edge (mantém acessibilidade) */
+/* Remover em navegadores que suportam */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Fieldset/legend resets */
+fieldset {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+/* Placeholder: consistência */
+::placeholder {
+    color: currentColor;
+    opacity: 0.6;
+}
+
+/* Remover outline intrusivo para foco quando não for focus-visible */
+:focus {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Detalhes/summary */
+details {
+    display: block;
+}
+
+summary {
+    display: list-item;
+}
+
+/* Figure / figcaption */
+figure {
+    margin: 0;
+}
+
+/* Media queries para usuários que preferem reduzir animações */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Utility: texto apenas para leitores de tela */
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+/* Utility: elemento oculto (display:none) preservando aria-hidden/semântico se necessário */
+.hidden {
+    display: none !important;
+}
+
+/* Small helpers for consistent rendering of replaced elements */
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+    outline-offset: -2px;
+}
+
+/* Prevent broken images from affecting layout too much */
+img[alt=""] {
+    display: inline-block;
+}
+
+/* Misc sane defaults */
+progress {
+    vertical-align: baseline;
+}
+
+/* Make all buttons and inputs opt into appearance: none on browsers that add native styles */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Accessibility: ensure focus outlines remain visible for keyboard users; projects can override with more tasteful styles */
+:root {
+    /* Tipografia e cores padrão do projeto — extraídas para variáveis para tornar dinâmicas */
+    --font-family: 'Urbanist', sans-serif;
+
+    /* cores principais */
+    --color-black: #1d1d1b;
+    --color-white: #181414;
+    --color-offwhite: #fbfbfb;
+    --color-offwhite-40: #fbfbfb40;
+    --color-gray: #cecece;
+    --color-darktext: #333333;
+    --color-green: #0F9D58;
+    --color-red: #d93025;
+    --color-button: #4D5615;
+    --color-link: #063db6;
+    --focus-color: #2563eb; /* azul acessível por padrão, pode ser sobrescrito */
+}
+
+:focus-visible {
+    outline: 3px solid var(--focus-color);
+    outline-offset: 2px;
+}
+
+/* Final note (comentário):
+   - Este arquivo define uma base neutra. Estilos visuais (cores, tipografia, espaçamento)
+     devem ser aplicados nos arquivos de estilo do projeto (ex: global.css).
+   - Se precisar, posso gerar uma versão mais enxuta (Meyer) ou uma versão baseada em Normalize.
+*/
