@@ -339,7 +339,7 @@
             const payload = {
                 phone: e164,
                 raw: phoneInput.value,
-                source: 'lp-events-fasthomes',
+                source: 'lp-events-novametalica',
                 timestamp: new Date().toISOString(),
                 page_url: window.location.href,
                 page_referrer: document.referrer || null,
@@ -356,7 +356,7 @@
             const waLink = `https://wa.me/${onlyDigits(e164)}?text=${encodeURIComponent('Olá! Quero receber o catálogo.')}`;
             openPopup({
                 title: 'Enviado com sucesso',
-                message: 'Nós da Equipe da Fast Homes agradecemos o seu contato!',
+                message: 'Nós da Equipe da Nova Metálica agradecemos o seu contato!',
                 linkHref: FALLBACK_URL,
                 linkText: 'Abrir catálogo no site',
                 mode: 'success',
