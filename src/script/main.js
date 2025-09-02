@@ -76,6 +76,32 @@
     // Helpers
     const onlyDigits = (v) => (v || '').replace(/\D+/g, '');
 
+    // Parse URL query parameters into an object
+    function getQueryParams() {
+        const params = {};
+        try {
+            var search = window.location.search || '';
+            if (!search) return params;
+            var usp = new URLSearchParams(search);
+            usp.forEach(function (value, key) {
+                params[key] = value;
+            });
+        } catch (e) {
+            // ignore
+        }
+        return params;
+    }
+
+    // Extract common UTM and campaign identifiers from query params
+    function extractUTMs(allParams) {
+        var keys = ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid', 'fbclid'];
+        var out = {};
+        keys.forEach(function (k) {
+            if (allParams[k]) out[k] = allParams[k];
+        });
+        return out;
+    }
+
     // Brazil phone mask: +55 (DD) 9XXXX-XXXX or XXXX-XXXX depending on length
     function formatBrazilPhone(input) {
         let v = onlyDigits(input);
@@ -307,11 +333,18 @@
         const minDelay = new Promise((resolve) => setTimeout(resolve, 1000)); // 1s min loading
 
         try {
+            var queryParams = getQueryParams();
+            var utms = extractUTMs(queryParams);
+
             const payload = {
                 phone: e164,
                 raw: phoneInput.value,
                 source: 'lp-events-fasthomes',
                 timestamp: new Date().toISOString(),
+                page_url: window.location.href,
+                page_referrer: document.referrer || null,
+                query_params: queryParams,
+                utm: utms,
             };
             const resultPromise = sendWebhook(payload);
             await Promise.all([resultPromise, minDelay]);
